@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "poster": "https://picsum.photos/seed/inception/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/inception-bg/1920/1080.jpg",
+    "rating": 8.8,
+    "year": 2010,
+    "genre": ["Action", "Sci-Fi", "Thriller"],
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "poster": "https://picsum.photos/seed/darkknight/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/darkknight-bg/1920/1080.jpg",
+    "rating": 9.0,
+    "year": 2008,
+    "genre": ["Action", "Crime", "Drama"],
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests."
+  },
+  {
+    "id": 3,
+    "title": "Interstellar",
+    "poster": "https://picsum.photos/seed/interstellar/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/interstellar-bg/1920/1080.jpg",
+    "rating": 8.6,
+    "year": 2014,
+    "genre": ["Adventure", "Drama", "Sci-Fi"],
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  },
+  {
+    "id": 4,
+    "title": "Pulp Fiction",
+    "poster": "https://picsum.photos/seed/pulpfiction/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/pulpfiction-bg/1920/1080.jpg",
+    "rating": 8.9,
+    "year": 1994,
+    "genre": ["Crime", "Drama"],
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption."
+  },
+  {
+    "id": 5,
+    "title": "The Matrix",
+    "poster": "https://picsum.photos/seed/matrix/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/matrix-bg/1920/1080.jpg",
+    "rating": 8.7,
+    "year": 1999,
+    "genre": ["Action", "Sci-Fi"],
+    "description": "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to break free."
+  },
+  {
+    "id": 6,
+    "title": "Parasite",
+    "poster": "https://picsum.photos/seed/parasite/300/450.jpg",
+    "backdrop": "https://picsum.photos/seed/parasite-bg/1920/1080.jpg",
+    "rating": 8.5,
+    "year": 2019,
+    "genre": ["Comedy", "Drama", "Thriller"],
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+  }
+]

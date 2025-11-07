@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My List - CineMax</title>
+
+    <!-- Same fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Simple header with a back button -->
+    <header class="details-header">
+      <div class="container">
+        <a href="index.html" class="back-button"
+          ><i class="fas fa-arrow-left"></i> Back to Home</a
+        >
+      </div>
+    </header>
+
+    <main id="my-list-main">
+      <div class="container">
+        <h1 class="section-title" data-aos="fade-right">My List</h1>
+        <div class="movies-grid" id="my-list-container">
+          <!-- Movies in the list will appear here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer is the same -->
+    <footer class="main-footer">
+      <div class="container">
+        <p>&copy; 2024 CineMax. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- We will create a new JS file for this page -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/my-list.js"></script>
+  </body>
+</html>

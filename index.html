@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMax - MEMO</title>
+
+    <!-- 1. Google Fonts (Bebas Neue for headings, Roboto for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 2. Font Awesome (for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- 3. AOS (for animations) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Our CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loading Spinner Overlay -->
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Top Header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <h1>CineMax</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="my-list.html">My List</a></li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for a movie..." />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-home">
+      <!-- Main Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 data-aos="fade-up">Inception</h1>
+          <p data-aos="fade-up" data-aos-delay="200">
+            A thief who steals corporate secrets through the use of
+            dream-sharing technology.
+          </p>
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+            <button class="btn-play"><i class="fas fa-play"></i> Play</button>
+            <button class="btn-info">
+              <i class="fas fa-info-circle"></i> More Info
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Top Rated Movies Section -->
+      <section class="movies-section" id="trending">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-right">Top Rated</h2>
+          <div class="movies-grid" id="trending-movies-container">
+            <!-- Movie cards will appear here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- New Releases Section -->
+      <section class="movies-section" id="new-releases">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-right">New Releases</h2>
+          <div class="movies-grid" id="new-movies-container">
+            <!-- Movie cards will appear here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+       <!-- Search Results Section (Initially Hidden) -->
+        <section class="movies-section" id="search-results-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Search Results</h2>
+                <div class="movies-grid" id="search-results-container">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <p>&copy; 2024 CineMax. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 3. AOS (JavaScript file) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Our JS file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,476 @@
+/* ===================================
+   GLOBAL STYLES & CSS VARIABLES
+   =================================== */
+:root {
+  --primary-color: #e50914; /* Red like Netflix */
+  --dark-bg: #141414;
+  --light-dark-bg: #1f1f1f;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+  --font-heading: "Bebas Neue", cursive;
+  --font-body: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================
+   HEADER STYLING
+   =================================== */
+.main-header {
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), transparent);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-dark-bg);
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  outline: none;
+  padding: 0 10px;
+}
+
+.search-bar i {
+  color: var(--text-secondary);
+}
+
+/* ===================================
+   HERO SECTION STYLING
+   =================================== */
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("../images/backdrops/inception.jpg"); /* We'll change this later with JS */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-play {
+  background-color: var(--text-color);
+  color: var(--dark-bg);
+}
+
+.btn-play:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-info {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: var(--text-color);
+}
+
+.btn-info:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* ===================================
+   MOVIES SECTIONS STYLING
+   =================================== */
+.movies-section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ===================================
+   MOVIE CARD STYLING
+   =================================== */
+.movie-card {
+  background-color: var(--light-dark-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card h3 {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.movie-card .rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* ===================================
+   FOOTER STYLING
+   =================================== */
+.main-footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid var(--light-dark-bg);
+  color: var(--text-secondary);
+}
+
+/* ===================================
+   LOADING SPINNER STYLING
+   =================================== */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Make sure it's on top of everything */
+  transition: opacity 0.5s ease-out;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid var(--light-dark-bg);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide the main content initially to prevent flickering */
+#main-home {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN (for smaller screens)
+   =================================== */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* We'll make a mobile menu later */
+  }
+  .hero {
+    padding-left: 20px;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* ===================================
+   MOVIE DETAILS PAGE STYLING
+   =================================== */
+.details-header {
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.back-button {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--primary-color);
+}
+
+#movie-details-main {
+  margin-top: 80px; /* To avoid content being hidden under the fixed header */
+  min-height: calc(100vh - 80px); /* Ensure it takes full height */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#movie-details-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(20, 20, 20, 0.7) 50%,
+    rgba(20, 20, 20, 0.8) 100%
+  );
+}
+
+.details-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 20px;
+  color: var(--text-color);
+}
+
+.details-poster img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.details-info h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.details-info .meta {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.details-info .meta span {
+  margin-left: 15px;
+}
+
+.details-info .genre-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.genre-list li {
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.details-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+.details-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.details-actions button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+/* Responsive for details page */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .details-info h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================
+   NO RESULTS MESSAGE
+   =================================== */
+.no-results-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  padding: 40px;
+  grid-column: 1 / -1; /* Make it span the full width of the grid */
+}
+
+/* ===================================
+   ADD TO LIST BUTTON STYLING
+   =================================== */
+.add-to-list-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-to-list-btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.add-to-list-btn.in-list {
+  color: var(--primary-color);
+}
